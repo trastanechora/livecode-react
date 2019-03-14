@@ -226,3 +226,26 @@ footer table td {
     padding-right: 30px;
 }
 /* Footer end here */
+
+.padding-5 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.category-img {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.padd {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.notfound {
+    margin-left: auto;
+    margin-right: auto;
+}

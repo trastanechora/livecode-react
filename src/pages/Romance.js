@@ -26,14 +26,23 @@ class Home extends Component {
     axios
       .get("https://api-todofancy.herokuapp.com/api/movies")
       .then(function(response) {
-        self.setState({movieList: response.data.movies});
+        var results = [];
+        var searchField = "Category";
+        var searchVal = "romance";
+        for (var i=0 ; i < response.data.movies.length ; i++)
+        {
+            if (response.data.movies[i][searchField] == searchVal) {
+                results.push(response.data.movies[i]);
+            }
+        }
+        self.setState({movieList: results});
         console.log(response.data.movies);
       })
       .catch(function(error) {
         console.log(error);
       }
     );
-    this.props.updateList(this.state.movieList);
+    // this.props.updateList(this.state.movieList);
   };
 
 

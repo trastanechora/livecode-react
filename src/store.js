@@ -4,14 +4,16 @@ import axios from "axios"
 
 // SET THE GLOBAL STATE VARIABLES
 const initialState = {
-    api_key: "",
-    email: "",
     password: "",
     full_name: "",
-    username: "",
-    is_login: false,
     article: "",
-    listNews: []
+    listNews: [],
+
+    movieList: [],
+    username: "",
+    email: "",
+    avatar: "",
+    is_login: false
 };
 
 const baseUrl = "https://newsapi.org/v2/everything?q="
@@ -46,29 +48,56 @@ export const actions = store => ({
             password: state.password
         };
         const self = this;
-        axios
-            .post("https://loginadmin.free.beeceptor.com/auth", data)
+
+        // console.log(store.movieList.find("action"))
+
+        await axios
+            .post("https://api-todofancy.herokuapp.com/api/auth", data)
             .then(function(response) {
-                if (response.data.hasOwnProperty("api_key")) {
+                if (response.data.hasOwnProperty("status")) {
+                    console.log("Login Berhasil!", response)
                     store.setState({
                         is_login: true,
-                        api_key: response.data.api_key,
-                        full_name: response.data.full_name,
-                        email: response.data.email
+                        username: response.data.user_data.username,
+                        email: response.data.user_data.email,
+                        avatar : response.data.user_data.avatar
                     });
+                    console.log("cek store", store.getState())
                 } else {
-                    store.setState({
-                        is_login: true,
-                        api_key: "response.data.api_key",
-                        full_name: "response.data.full_name",
-                        email: "response.data.email",
-                        article: "TEST"
-                    });
-                    console.log("test api postLogin > state", state);
+                    // store.setState({
+                    //     is_login: true,
+                    //     api_key: "response.data.api_key",
+                    //     full_name: "response.data.full_name",
+                    //     email: "response.data.email",
+                    //     article: "TEST"
+                    // });
+                    console.log("Login Gagal");
                 }
             })
             .catch(function(error) {
                 console.log(error);
             });
+    },
+    setCategory: async state => {
+        console.log("CLICKED");
+        // console.log(store.movieList.find("action"))
+
+        // var results = [];
+        // var searchField = "Category";
+        // var searchVal = "action";
+        // for (var i=0 ; i < store.movieList.length ; i++)
+        // {
+        //     if (store.movieList[i][searchField] == searchVal) {
+        //         results.push(store.movieList[i]);
+        //     }
+        // }
+
+        console.log("find movie list", store.getState())
+    },
+    updateList: async (state, data) => {
+        console.log("data from store", data)
+        store.setState({
+            movieList: data
+        });
     }
 })
