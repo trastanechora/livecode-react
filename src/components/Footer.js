@@ -17,7 +17,7 @@ class Footer extends Component {
                         <img src={logo} className="logo-footer"/>
                     </div>
                     <div>
-                        <p className="copyright"> © Copyright Alterra Group 2019</p>
+                        <p className="copyright"> © Copyright MAE 2019</p>
                     </div>
                 </div>
                 <div className="col-md-2 col-sm">
