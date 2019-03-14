@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900');
+
+body {
+    font-family: 'Muli', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Navbar start here */
+.header1 {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.header2 {
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header a {
+    text-align: center;
+    color: #19345E;
+}
+
+header .row nav a.nav-link {
+    color: #F47522;
+}
+
+header li {
+    width: 10%;
+}
+/* Navbar end here */
+
+/* Banner start here */
+
+#front-banner {
+    background-image: url("../img/img-header.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-size: cover;
+    margin-bottom: 60px;
+    padding-top: 100px;
+}
+
+section .banner-element {
+    color: white;
+    text-align: center;
+}
+
+section #location {
+    font-size: 14px;
+}
+
+section .banner-element #profile-img {
+    border-radius: 50%;
+    width: 15%;
+    margin: 20px;
+}
+
+.banner-element .btn.btn-danger {
+    margin: 20px;
+}
+/* Banner end here */
+
+/* Content home start here */
+.content-wrapper {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 180px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 31px 57px 76px 46px;
+}
+
+.content-wrapper p {
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+}
+
+.content-wrapper h1 {
+    font-family: 'Muli', sans-serif;
+    font-size: 25px;
+}
+
+.content-wrapper table #space-in-table {
+    width: 15%;
+}
+
+.content-wrapper table td {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.content-wrapper table th {
+    padding-bottom: 35px;
+}
+
+.content-wrapper .row table .info tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.content-wrapper table td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CBCBCB;
+}
+
+.content-wrapper table td.middle-dotes {
+    border-right-style: none;
+}
+.content-wrapper table td.end-dotes {
+    border-left-style: none;
+}
+.content-wrapper table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* Content home end here */
+
+/* Content galery start here */
+.horrizontal-line {
+    margin-top: 130px;
+    width: 70%;
+    height: 40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.wrapper-galery {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.galery-photo {
+    width: 305px; 
+    height: 305px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 38px;
+    max-width: 100%;
+    border-radius: 30px;
+}
+
+img.galery-photo:hover {
+    /* background-color: white, 0.6;
+    transition: 0.5s; */
+    background-color: white;
+}
+
+/* Content galery end here */
+
+/* Footer start here */
+footer {
+    background-color: #19345E;
+    height: 207px;
+    color: white;
+}
+
+footer .row {
+    justify-content: space-between;
+}
+
+footer .logo-footer {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    padding-top: 50px;
+}
+
+footer p.copyright {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+    font-size: 10px;
+}
+
+footer .socmed {
+    padding-top: 50px;
+}
+
+footer table td {
+    padding-right: 30px;
+}
+/* Footer end here */
+
+/* Contact page start here */
+body {
+    margin: 0 auto;
+}
+
+button {
+    color: white;
+    background-color: orangered;
+}
+
+.left {
+    background-image: linear-gradient(
+        rgba(25, 52, 94, 0.6), 
+        rgba(25, 52, 94, 0.6)), url("../img/side-view.jpg");
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right {
+    padding: 30px 100px;
+    font-family: 'Muli', sans-serif;
+}
+
+#alterra-at-contact {
+    display: table;
+    margin: 0 auto;
+}
+
+p {
+    color: grey;
+    font-size: 12px;
+}
+
+h5 {
+    color: #19345E;
+    margin: 20px 10px 10px 0;
+    font-size: 28px;
+}
+
+.contact-button {
+    background-color: #F47522;
+    margin-top: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+button#submit.submit-button :hover {
+    background-color: yellow !important;
+}
+
+form { 
+    margin-top: 24px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #F47522;
+    border-color: #F47522;
+}
+
+.btn-danger:hover {
+    color: #F47522;
+    background-color: transparent;
+    border-color: #F47522;
+}
+
+button#submit.form-control.contact-button:hover {
+    background-color: transparent;
+    color: black;
+}
+
+form label {
+    margin-top: 30px;
+}
+/* Contact page end here */
+
+
+/* Cobacoba */
+.wow {
+    color: white;
+    animation-name: movingName;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes movingName {
+  0%   {color:white; left:0px; top:0px;}
+  25%  {color:blue; left:0; top:500px;}
+  50%  {color:white; left:0; top:0;}
+  75%  {color:green; left:0px; top:500;}
+  100% {color:white; left:0px; top:0px;}
+}
+
+.wow2 {
+    color: white;
+    animation-name: movingName2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+@keyframes movingName2 {
+  0%   {color:yellow; left:0px; top:0px;}
+  25%  {color:white; left:0; top:500px;}
+  50%  {color:red; left:0; top:0;}
+  75%  {color:white; left:0px; top:500;}
+  100% {color:orangered; left:0px; top:0px;}
+}
+
+#ul-nav {
+  width: 100%; 
+  justify-content: flex-end;
+}
+
+.a-orange {
+  color: #F47522;
+}
+
+.a-blue {
+  color: #19345E;
+}
+
+.head-row {
+  background-color: #f8f9fa
+}
+
+.full-width {
+  width: 100%;
+}
+
+.margin-left-50 {
+  margin-left: 50px;
+}
+
+.margin-left-30 {
+  margin-left: 30px;
+}
+
+.red {
+  color:red;
+}
+
+.no-resize {
+  resize: none;
+}
+
